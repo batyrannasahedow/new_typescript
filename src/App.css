@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#MyInput{
+    background-image: url(../src/assets/Search.png);
+    background-repeat: no-repeat;
+    background-position: 490px 7px;
+    background-size: 20px;
+    padding: 8px 11px;
+    margin: 10px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    width: 500px;
+    font-size: 13px;
+
+}
+.todo-create{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    padding: 10px;
+    margin: 7px;
+    height: 10px;
+    
+}
+.select-todo{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 7px 7px;
+    margin: 7px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: rgb(77, 77, 221);
+    color: white;
+    cursor: pointer;
+
+}
+.center-todo{
+    background-size: 20px;
+    padding: 8px 11px;
+    margin: 10px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    width: 550px;
+    font-size: 13px; 
+}
+.button-todo{
+    padding: 7px 7px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: rgb(77, 77, 221);
+    color: white;
+    cursor: pointer;
+}
+.option-todo{
+    background-color: white;
+    color: black;
+}
+.todo-b{
+    padding: 9px 12px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: rgb(77, 77, 221);
+    color: white;
+    cursor: pointer;
+    margin-left: 500px;
+    margin-top: 0px;
+}
+.todo-a{
+    font-size: 30px;
+    border: 1px solid blue;
+    border-radius: 90px;
+    background-color: rgb(77, 77, 221);
+    color: white;
+    cursor: pointer;
+    padding: 7px 15px;
+    margin-top: 270px;
+    margin-left: 70%;
+
+}
+.select{
+    border: 1px solid rgb(84, 49, 182);
+    width: 600px;
+    margin-left: 350px;
+    padding: 20px;
+    padding-top: 0;
+    position: relative;
+ 
+}
+.div-dod{
+    margin-left: 10px;
+    
+}
+.cancel{
+    border: 1px solid blue;
+    background-color: white;
+    color: blue;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 9px 12px;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: -35px;
+    position: absolute;
+}
+#root{
+    height: 100vh;
+}
+.icons-todo{
+    border: 1px solid rgb(77, 77, 221);
+    background-color: rgb(77, 77, 221);
+    color: white;
+    border-radius: 2px;
+    padding: 4px 7px;
+    margin-top: 10px;
+    position: absolute;
+}
+.new-todo{
+    position: absolute;
+}
+.form-to{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    padding: 5px;
+    border-bottom: 1px solid blue;
+    margin: 0  390px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.div-mod{
+    position: relative;
+}
+.label-con{
+    padding-left: 5px;
+}
+.ciedit{
+    padding-left: 0px;
+}
+.delete{
+    padding-left: 0px;
+}
