@@ -106,8 +106,12 @@ body {
   position: absolute;
 }
 .div3-header{
-position: relative;
-margin-top: 45px;
+position: absolute;
+height: 120px;
+width: 305px;
+padding-top: 10px;
+margin-top: -20px;
+overflow: auto;
 }
 .hr-icon {
   margin-top: 55px;
@@ -121,23 +125,25 @@ margin-top: 45px;
 }
 .span-days1{
   background-color: rgba(122, 115, 111, 0.384);
-  position: relative;
-  margin-top: 10px;
+  position: absolute;
+  margin-top: -8px;
   margin-bottom: 20px;
   outline: none;
   border: none;
 }
 .span-days2 {
-  margin-left: 19px;
-  position: relative;
-  margin-right: 19px;
+  margin-left: 59px;
+  position: absolute;
+  margin-top: -8px;
   background-color: rgba(122, 115, 111, 0.384);
   outline: none;
   border: none;
 }
 .span-days3{
   background-color: rgba(141, 131, 124, 0.384);
-  position: relative;
+  position: absolute;
+  margin-left: 120px;
+  margin-top: -8px;
   outline: none;
   border: none;
 }
@@ -171,7 +177,7 @@ margin-top: 45px;
 }
 .header-bash{
   position: relative;
-  margin-top: -470px;
+  margin-top: -353px;
   margin-left: 312px;
   width: 750px;
   height: 221px;
