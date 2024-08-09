@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useRef } from 'react'
+import React, { ChangeEvent, useEffect, useRef } from 'react'
 import "../App.css";
 import { CiSearch } from "react-icons/ci";
 import { LiaLocationArrowSolid } from "react-icons/lia";
@@ -20,6 +20,7 @@ const getSearchOptions = async (value: string) =>{
   .then((res) => res.json())
   .then((res) => res(res))
 }
+
 const onInputChange =(e: ChangeEvent<HTMLInputElement>) =>{
       const value = e.target.value.trim()
       setTerm(value)
@@ -27,10 +28,18 @@ const onInputChange =(e: ChangeEvent<HTMLInputElement>) =>{
       getSearchOptions(value)
 }
 const getForecast = async (city : string) => {
- await fetch(`${api_Endpoint}forecast.json?key=${api_key}&q=${city}&days=10`)
-  .then((res) => res.json())
-  .then((res) => setForecast(res))
-}
+  await fetch(`${api_Endpoint}forecast.json?key=${api_key}&q=${city}&days=10`)
+   .then((res) => res.json())
+   .then((res) => setForecast(res))
+ }
+useEffect(()=>{
+  const getForecast = async () => {
+    await fetch(`${api_Endpoint}forecast.json?key=${api_key}&q=Ashgabat&days=10`)
+     .then((res) => res.json())
+     .then((res) => setForecast(res))
+   }
+   getForecast()
+},[])
  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) =>{
   if (e.key === 'Enter') {
     getForecast(inputRef.current.value);
@@ -159,13 +168,10 @@ const getForecast = async (city : string) => {
         }
         
         </div>
-     
-        
-      
       <div className="header-bash">
         <h1 className='h1-bash' >{forecast?.current.condition.text}</h1>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[9].time).format('hh:mm')}</span>
+          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[9].time).format('HH:mm')}</span>
           <hr />
           <img className='h-icon'  src={`${forecast?.forecast.forecastday[0].hour[9].condition.icon}`}/>
           <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[9].temp_c}℃</h3>
@@ -173,31 +179,31 @@ const getForecast = async (city : string) => {
         <div className="div5-header" >
           <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[10].time).format('HH:mm')}</span>
           <hr />
-          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[10].condition.icon}`} alt="" />
+          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[10].condition.icon}`} />
           <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[10].temp_c}℃</h3>
         </div>
         <div className="div5-header" >
           <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[11].time).format('HH:mm')}</span>
           <hr />
-          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[11].condition.icon}`} alt="" />
+          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[11].condition.icon}`} />
           <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[11].temp_c}℃</h3>
         </div>
         <div className="div5-header" >
           <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[12].time).format('HH:mm')}</span>
           <hr />
-          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[12].condition.icon}`} alt="" />
+          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[12].condition.icon}`} />
           <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[12].temp_c}℃</h3>
         </div>
         <div className="div5-header" >
           <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[13].time).format('HH:mm')}</span>
           <hr />
-          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[13].condition.icon}`} alt="" />
+          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[13].condition.icon}`}  />
           <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[13].temp_c}℃</h3>
         </div>
         <div className="div5-header" >
           <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[14].time).format('HH:mm')}</span>
           <hr />
-          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[14].condition.icon}`} alt="" />
+          <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[14].condition.icon}`} />
           <h3 className="h-gradus"> {forecast?.forecast.forecastday[0].hour[14].temp_c}℃</h3>
         </div>
       </div>
