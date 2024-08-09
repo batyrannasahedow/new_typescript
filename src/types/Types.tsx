@@ -1,9 +1,11 @@
 export interface TodoInitialState {
   todos: TodoType[];
-  completed?: boolean
+  filter: 'all' | 'complete' | 'incomplete';
+  
 }
 
 export interface TodoType {
-  id: number,
-  content: String
+  id: number;
+  content: String;
+  completed?: boolean;
 }
