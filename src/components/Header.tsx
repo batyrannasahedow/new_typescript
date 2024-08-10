@@ -3,7 +3,7 @@ import "../App.css";
 import { CiSearch } from "react-icons/ci";
 import { LiaLocationArrowSolid } from "react-icons/lia";
 import {  Root } from '../Types/Type';
-import dayjs  from "dayjs"
+import dayjs from "dayjs"
 
 function Header (): JSX.Element {
   const inputRef = useRef();
@@ -33,20 +33,14 @@ const getForecast = async (city : string) => {
    .then((res) => setForecast(res))
  }
 useEffect(()=>{
-  const getForecast = async () => {
-    await fetch(`${api_Endpoint}forecast.json?key=${api_key}&q=Ashgabat&days=10`)
-     .then((res) => res.json())
-     .then((res) => setForecast(res))
-   }
-   getForecast()
+     getForecast("Ashgabat")
 },[])
  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) =>{
   if (e.key === 'Enter') {
     getForecast(inputRef.current.value);
   }
  }
-
-
+ 
 
   return (
     <div className="Header">
@@ -171,40 +165,46 @@ useEffect(()=>{
       <div className="header-bash">
         <h1 className='h1-bash' >{forecast?.current.condition.text}</h1>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[9].time).format('HH:mm')}</span>
+          <span className="span-sagat" >{dayjs().add(1, 'hour').format('HH:00')} </span>
           <hr />
           <img className='h-icon'  src={`${forecast?.forecast.forecastday[0].hour[9].condition.icon}`}/>
-          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[9].temp_c}℃</h3>
+          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour.find((hour: any) =>
+      dayjs(hour.time).isSame(dayjs().startOf('hour').subtract(1, 'hour')))?.temp_c}℃</h3>
         </div>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[10].time).format('HH:mm')}</span>
+          <span className="span-sagat" >{dayjs().add(2, 'hour').format('HH:00')}</span>
           <hr />
           <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[10].condition.icon}`} />
-          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[10].temp_c}℃</h3>
+          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour.find((hour: any) =>
+      dayjs(hour.time).isSame(dayjs().startOf('hour').subtract(2, 'hour')))?.temp_c}℃</h3>
         </div>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[11].time).format('HH:mm')}</span>
+          <span className="span-sagat" >{dayjs().add(3, 'hour').format('HH:00')}</span>
           <hr />
           <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[11].condition.icon}`} />
-          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[11].temp_c}℃</h3>
+          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour.find((hour: any) =>
+      dayjs(hour.time).isSame(dayjs().startOf('hour').subtract(3, 'hour')))?.temp_c}℃</h3>
         </div>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[12].time).format('HH:mm')}</span>
+          <span className="span-sagat" >{dayjs().add(4, 'hour').format('HH:00')}</span>
           <hr />
           <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[12].condition.icon}`} />
-          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[12].temp_c}℃</h3>
+          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour.find((hour: any) =>
+      dayjs(hour.time).isSame(dayjs().startOf('hour').subtract(4, 'hour')))?.temp_c}℃</h3>
         </div>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[13].time).format('HH:mm')}</span>
+          <span className="span-sagat" >{dayjs().add(5, 'hour').format('HH:00')}</span>
           <hr />
           <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[13].condition.icon}`}  />
-          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour[13].temp_c}℃</h3>
+          <h3 className="h-gradus">{forecast?.forecast.forecastday[0].hour.find((hour: any) =>
+      dayjs(hour.time).isSame(dayjs().startOf('hour').subtract(5, 'hour')))?.temp_c}℃</h3>
         </div>
         <div className="div5-header" >
-          <span className="span-sagat" >{dayjs(forecast?.forecast.forecastday[0].hour[14].time).format('HH:mm')}</span>
+          <span className="span-sagat" >{dayjs().add(6, 'hour').format('HH:00')}</span>
           <hr />
           <img className='h-icon' src={`${forecast?.forecast.forecastday[0].hour[14].condition.icon}`} />
-          <h3 className="h-gradus"> {forecast?.forecast.forecastday[0].hour[14].temp_c}℃</h3>
+          <h3 className="h-gradus"> {forecast?.forecast.forecastday[0].hour.find((hour: any) =>
+      dayjs(hour.time).isSame(dayjs().startOf('hour').subtract(6, 'hour')))?.temp_c}℃</h3>
         </div>
       </div>
       <footer className="footer">
