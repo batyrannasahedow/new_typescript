@@ -11,7 +11,7 @@ body {
   border: 3px solid rgb(88, 88, 218);
 }
 .div-weather {
-  background-image: url(../src/pic/Dashky.jpg);
+  background-image: url(../src/assets/Dashky.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 590px;
@@ -24,7 +24,7 @@ body {
   width: 1100px;
   border: 10px solid rgba(247, 223, 178, 0.63);
   border-radius: 20px;
-  background-image: url(../src/pic/Ichki.jpg);
+  background-image: url(../src/assets/Ichki.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 495px;
