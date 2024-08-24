@@ -1,0 +1,213 @@
+.Header {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 290px;
+    height: 452px;
+    border-radius: 20px;
+    background-color: rgba(238, 232, 227, 0.541);
+  }
+  .search-input {
+    border: 1px solid black;
+    margin-top: 8px;
+    padding: 4px;
+    padding-left: 30px;
+    border-radius: 10px;
+    width: 87%;
+    color: white;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    height: 26px;
+    border: none;
+    background-color: rgba(122, 115, 111, 0.384);
+    outline: none;
+  }
+  .search-icon {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    padding-top: 15px;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .div2-header {
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 175px;
+  }
+  .img-icon {
+    width: 200px;
+    margin-top: -285px;
+    margin-left: 45px;
+    justify-content: center;
+    position: relative;
+  }
+  .img-name {
+    font-size: 12px;
+    position: absolute;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .location-icon {
+    position: absolute;
+    font-size: 16px;
+    margin-top: -10px;
+    padding-left: 25px;
+  }
+  .location-icons {
+    position: absolute;
+    font-size: 20px;
+    margin-top: -13px;
+  }
+  .gradus {
+    position: absolute;
+    margin-top: 8px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .sagat-gun {
+    margin-top: 35px;
+    position: absolute;
+  }
+  .div3-header{
+  position: absolute;
+  height: 120px;
+  width: 305px;
+  padding-top: 10px;
+  margin-top: -20px;
+  overflow: auto;
+  }
+  .hr-icon {
+    margin-top: 55px;
+  }
+  .chaklama {
+    margin-top: -1px;
+  }
+  .div4-header {
+    margin-top: -27px;
+    position: relative;
+  }
+  .span-days1{
+    background-color: rgba(122, 115, 111, 0.384);
+    position: absolute;
+    margin-top: -8px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+  }
+  .span-days2 {
+    margin-left: 59px;
+    position: absolute;
+    margin-top: -8px;
+    background-color: rgba(122, 115, 111, 0.384);
+    outline: none;
+    border: none;
+  }
+  .span-days3{
+    background-color: rgba(141, 131, 124, 0.384);
+    position: absolute;
+    margin-left: 120px;
+    margin-top: -8px;
+    outline: none;
+    border: none;
+  }
+  .span-days1:hover {
+    background-color: rgba(58, 49, 44, 0.384);
+  }
+  .span-days2:hover {
+    background-color: rgba(58, 49, 44, 0.384);
+  }
+  .span-days3:hover {
+    background-color: rgba(58, 49, 44, 0.384);
+  }
+  .storm-icon{
+    background-color: rgba(122, 115, 111, 0.384);
+    border: 1px solid rgba(122, 115, 111, 0.384);
+    border-radius: 4px;
+    margin: 15px 0;
+    width: 40px;
+  }
+  .span-tuesday{
+    margin: 18px 12px;
+    position: relative;
+    font-size: 15px;
+    position: absolute;
+    font-weight: 550;
+  }
+  .span-storm{
+    position: absolute;
+    font-size: 15px;
+    margin: -40px 57px;
+  }
+  .header-bash{
+    position: relative;
+    margin-top: -353px;
+    margin-left: 312px;
+    width: 750px;
+    height: 221px;
+  }
+  .h1-bash{
+    position: absolute;
+    margin-left: 20px;
+  }
+  .div5-header{
+    position: relative;
+    border: 1px solid rgba(238, 232, 227, 0.541);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 73px;
+    background-color: rgba(238, 232, 227, 0.541);
+    width: 80px;
+    height: 135px;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .span-sagat{
+    margin-left: 22px;
+  }
+  .night-storm{
+    font-size: 50px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 7px;
+    margin-left: 15px;
+  }
+  .h-gradus{
+    margin-top: 2px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .h-icon{
+  position: relative;
+  margin-top: -8px;
+  margin-left: 6px;
+  }
+  .footer{
+    margin-top: -4px;
+    margin-left: 332px;
+    width: 720px;
+    height: 238px;
+    position: relative; 
+  }
+  .div6-header{
+    border: 1px solid rgba(238, 232, 227, 0.541);
+    background-color: rgba(238, 232, 227, 0.541);
+    border-radius: 15px;
+    width: 300px;
+    height: 151px;
+    padding: 12px;
+    display: inline-block;
+  }
+  .div7-header{
+    border: 1px solid rgba(238, 232, 227, 0.541);
+    background-color: rgba(238, 232, 227, 0.541);
+    border-radius: 15px;
+    width: 300px;
+    height: 151px;
+    padding: 12px;
+    margin-left: 60px;
+    display: inline-block;
+    position: absolute;
+  }
